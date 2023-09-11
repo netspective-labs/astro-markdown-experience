@@ -4,7 +4,7 @@ import type { Image, Link } from 'mdast';
 import type { MdxJsxFlowElement, MdxJsxAttribute } from "mdast-util-mdx-jsx"
 import { visit } from 'unist-util-visit';
 import type { VFile } from 'vfile';
-import * as ameFS from "./fs.ts";
+import * as ameFS from "./fs";
 
 export interface RelocationPaths {
 	readonly colocatedNodeUrlAbsFileName: string;

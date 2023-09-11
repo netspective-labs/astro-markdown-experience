@@ -1,6 +1,6 @@
 {
   "name": "astro-markdown-experience",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "A collection of remark plugins for an enhanced Astro markdown experience.",
   "scripts": {
     "test": "vitest"

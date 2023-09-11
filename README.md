@@ -7,12 +7,12 @@ A collection of remark plugins designed to improve our markdown processing exper
 - [Astro Markdown Experience](#astro-markdown-experience)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
-  - [Plugins](#plugins)
+  - [Remark Plugins](#remark-plugins)
+    - [Rewrite Previewable URL](#rewrite-previewable-url)
+    - [Rewrite Links](#rewrite-links)
     - [Chart](#chart)
     - [Diagram](#diagram)
     - [Reading Time](#reading-time)
-    - [Rewrite Links](#rewrite-links)
-    - [Rewrite Previewable URL](#rewrite-previewable-url)
     - [Validate Resources](#validate-resources)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -24,43 +24,22 @@ A collection of remark plugins designed to improve our markdown processing exper
 pnpm add astro-markdown-experience
 ```
 
-## Plugins
-
-### Chart
-
-Describe the `chart` plugin's functionality, benefits, and use case here.
-
-```javascript
-import chart from 'astro-markdown-experience/chart';
-```
-
-### Diagram
-
-Describe the `diagram` plugin's functionality, benefits, and use case here.
-
-```javascript
-import diagram from 'astro-markdown-experience/diagram';
-```
-
-### Reading Time
-
-Estimate the reading time for your markdown content.
-
-```javascript
-import readingTime from 'astro-markdown-experience/reading-time';
-```
-
-### Rewrite Links
-
-Transform or modify links within your markdown.
-
-```javascript
-import rewriteLinks from 'astro-markdown-experience/rewrite-links';
-```
+## Remark Plugins
 
 ### Rewrite Previewable URL
 
-Modify URLs to previewable versions for enhanced user experience.
+Modify URLs to previewable versions for enhanced user experience. This allows
+you to preview markdown content directly from the VS Code and automatically
+rewrite any URLs to final published versions on build.
+
+For example, if you use `./otherfile.md` in your markdown it will be rewritten
+to the published URL like `https://example.com/otherfile`. This allows the local
+editing and previewing experience to feel more like the final published version.
+
+```markdown
+[VS Code Previewable](./otherfile.md)
+```
+
 We want to be able to co-locate images with Markdown during editing so that
 they are previewable and convenient to manage. However, during builds of
 static sites or apps we want the same images to be available in the `public`
@@ -125,6 +104,37 @@ export default defineConfig({
     ...
 ```
 
+### Rewrite Links
+
+Transform or modify links within your markdown.
+
+```javascript
+import rewriteLinks from 'astro-markdown-experience/rewrite-links';
+```
+
+### Chart
+
+Describe the `chart` plugin's functionality, benefits, and use case here.
+
+```javascript
+import chart from 'astro-markdown-experience/chart';
+```
+
+### Diagram
+
+Describe the `diagram` plugin's functionality, benefits, and use case here.
+
+```javascript
+import diagram from 'astro-markdown-experience/diagram';
+```
+
+### Reading Time
+
+Estimate the reading time for your markdown content.
+
+```javascript
+import readingTime from 'astro-markdown-experience/reading-time';
+```
 
 ### Validate Resources
 

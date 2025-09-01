@@ -155,3 +155,6 @@ Contributions are welcome! See the [CONTRIBUTING.md](./CONTRIBUTING.md) file for
 ## License
 
 MIT - see the [LICENSE](./LICENSE) file for details.
+
+
+<!-- Security scan triggered at 2025-09-02 00:50:00 -->
